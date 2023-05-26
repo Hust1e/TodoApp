@@ -1,3 +1,6 @@
+<style>
+        @import url("css/app.css");
+</style>
 <x-app-layout>
     @section('content')
         <x-flash-message/>
@@ -42,7 +45,7 @@
                 </div>
             </div>
         @else
-            <div class="container-sm">
+            <div class="empty-task">
                 <h1>You don't have active tasks</h1>
                 <form action="{{ route('task.create') }}" method="get">
                     <input type="submit" class="btn btn-primary" value="Add them!">

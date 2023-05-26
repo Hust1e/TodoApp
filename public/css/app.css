@@ -90,3 +90,11 @@ body {
     left: 0; bottom: 0; right: 0;
 }
 
+.empty-task {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
