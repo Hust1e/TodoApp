@@ -12,8 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', \App\Http\Controllers\Site\IndexController::class);
 
-Route::get('/', \App\Http\Controllers\Task\IndexController::class)->middleware('auth');
+Route::get('/main', \App\Http\Controllers\Task\IndexController::class)->middleware('auth');
 
 
 Route::group(['prefix' => 'tasks', 'middleware' => 'auth'], function(){
