@@ -1,4 +1,4 @@
-Todo app for FrameWorkTeam.
+Todo app
 Environment: 
 PHP 8.1.12
 Laravel 9.39.0
