@@ -22,3 +22,12 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY ./src /var/www/html
 
 RUN composer install
+
+# Копируем наш конфигурационный файл в контейнер
+COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
+
+# Включаем модуль rewrite
+RUN a2enmod rewrite
+
+# Перезапускаем Apache для применения новых настроек
+RUN service apache2 restart

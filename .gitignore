@@ -1,3 +1,4 @@
 pgdata/*
 README.Docker.md
 vendor/
+/src/composer.lock

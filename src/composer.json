@@ -1,7 +1,11 @@
 {
     "require": {
         "phpunit/phpunit": "^9.6",
-        "symfony/dotenv": "*"
+        "symfony/dotenv": "*",
+        "symfony/routing": "^7.2",
+        "symfony/http-foundation": "^7.2",
+        "symfony/yaml": "^7.2",
+        "symfony/config": "^7.2",
+        "doctrine/annotations": "^2.0"
     }
 }
- 
