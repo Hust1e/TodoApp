@@ -1,0 +1,35 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 9000:80
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./src:/var/www/html/
+  db:
+    image: postgres
+    restart: always
+
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=db_example
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=example
+    expose:
+      - 5432
+    healthcheck:
+      test: [ "CMD", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 9001:8080
+volumes:
+  pgdata:
