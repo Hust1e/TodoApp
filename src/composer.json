@@ -6,6 +6,7 @@
         "symfony/http-foundation": "^7.2",
         "symfony/yaml": "^7.2",
         "symfony/config": "^7.2",
-        "doctrine/annotations": "^2.0"
+        "doctrine/annotations": "^2.0",
+        "symfony/http-kernel": "^7.2"
     }
 }

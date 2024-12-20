@@ -1,26 +1,10 @@
-<?php
-
-require_once __DIR__.'/vendor/autoload.php';
-
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\HttpFoundation\Response;
-
-$request = Request::createFromGlobals();
-$response = new Response();
-
-$map = [
-    '/hello' => __DIR__.'/../src/hello.php',
-    '/bye'   => __DIR__.'/bye.php',
-];
-
-$path = $request->getPathInfo();
-echo($path);
-if (isset($map[$path])) {
-    echo("$map[$path]");
-    require $map[$path];
-} else {
-    $response->setStatusCode(404);
-    $response->setContent('Not Found');
-}
-
-$response->send();
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Получение JSON-данных</title>
+</head>
+<body>
+    <script src="assets/js/script.js" defer></script>
+</body>
+</html>
